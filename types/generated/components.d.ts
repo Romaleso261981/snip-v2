@@ -11,18 +11,6 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
-  info: {
-    displayName: 'Quote';
-    icon: 'indent';
-  };
-  attributes: {
-    body: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
-}
-
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -76,10 +64,11 @@ export interface UiButton extends Struct.ComponentSchema {
 export interface UiGalary extends Struct.ComponentSchema {
   collectionName: 'components_ui_galaries';
   info: {
-    displayName: 'galary';
+    description: '';
+    displayName: 'gallery';
   };
   attributes: {
-    galaryCard: Schema.Attribute.Component<'ui.galary-card', true>;
+    galleryCard: Schema.Attribute.Component<'ui.galary-card', true>;
   };
 }
 
@@ -109,7 +98,6 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

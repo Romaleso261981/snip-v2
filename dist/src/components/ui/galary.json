@@ -1,11 +1,12 @@
 {
     "collectionName": "components_ui_galaries",
     "info": {
-        "displayName": "galary"
+        "displayName": "gallery",
+        "description": ""
     },
     "options": {},
     "attributes": {
-        "galaryCard": {
+        "galleryCard": {
             "displayName": "galaryCard",
             "type": "component",
             "repeatable": true,

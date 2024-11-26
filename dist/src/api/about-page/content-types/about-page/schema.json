@@ -1,0 +1,44 @@
+{
+    "kind": "collectionType",
+    "collectionName": "about_pages",
+    "info": {
+        "singularName": "about-page",
+        "pluralName": "about-pages",
+        "displayName": "aboutt",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "text": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "aboutPhoto": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "aboutPhotoColection": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "descriptionPhoto": {
+            "type": "text"
+        }
+    }
+}
