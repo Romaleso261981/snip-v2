@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_ui_galaries",
+    "info": {
+        "displayName": "galary"
+    },
+    "options": {},
+    "attributes": {
+        "galaryCard": {
+            "displayName": "galaryCard",
+            "type": "component",
+            "repeatable": true,
+            "component": "ui.galary-card"
+        }
+    }
+}

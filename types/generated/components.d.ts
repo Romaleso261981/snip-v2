@@ -62,6 +62,49 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface UiButton extends Struct.ComponentSchema {
+  collectionName: 'components_ui_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface UiGalary extends Struct.ComponentSchema {
+  collectionName: 'components_ui_galaries';
+  info: {
+    displayName: 'galary';
+  };
+  attributes: {
+    galaryCard: Schema.Attribute.Component<'ui.galary-card', true>;
+  };
+}
+
+export interface UiGalaryCard extends Struct.ComponentSchema {
+  collectionName: 'components_ui_galary_cards';
+  info: {
+    displayName: 'galaryCard';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    img: Schema.Attribute.Media<'images', true>;
+  };
+}
+
+export interface UiHero extends Struct.ComponentSchema {
+  collectionName: 'components_ui_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    heroBg: Schema.Attribute.Media<'images'>;
+    heroTitle: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +113,10 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'ui.button': UiButton;
+      'ui.galary': UiGalary;
+      'ui.galary-card': UiGalaryCard;
+      'ui.hero': UiHero;
     }
   }
 }

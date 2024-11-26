@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_ui_galary_cards",
+    "info": {
+        "displayName": "galaryCard"
+    },
+    "options": {},
+    "attributes": {
+        "href": {
+            "type": "string"
+        },
+        "img": {
+            "allowedTypes": [
+                "images"
+            ],
+            "type": "media",
+            "multiple": true
+        }
+    }
+}

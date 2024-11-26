@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "Home"
+    "displayName": "Home",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,24 @@
     },
     "title": {
       "type": "string"
+    },
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.hero"
+    },
+    "button": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.button"
+    },
+    "galary": {
+      "displayName": "galary",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.galary"
     }
   }
 }
