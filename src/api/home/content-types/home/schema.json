@@ -10,31 +10,60 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "description": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "Hero": {
       "displayName": "Hero",
       "type": "component",
       "repeatable": false,
-      "component": "ui.hero"
+      "component": "ui.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "button": {
       "displayName": "button",
       "type": "component",
       "repeatable": false,
-      "component": "ui.button"
+      "component": "ui.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "galary": {
       "displayName": "galary",
       "type": "component",
       "repeatable": false,
-      "component": "ui.galary"
+      "component": "ui.galary",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
