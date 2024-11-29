@@ -369,41 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutPageAboutPage extends Struct.CollectionTypeSchema {
-  collectionName: 'about_pages';
-  info: {
-    description: '';
-    displayName: 'aboutt';
-    pluralName: 'about-pages';
-    singularName: 'about-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    aboutPhoto: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    aboutPhotoColection: Schema.Attribute.Media<'images', true>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    descriptionPhoto: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::about-page.about-page'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    text: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
@@ -427,38 +392,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
-  collectionName: 'galleries';
-  info: {
-    description: '';
-    displayName: 'gallerys';
-    pluralName: 'galleries';
-    singularName: 'gallery';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    galleryCards: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::gallery.gallery'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -559,7 +492,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
-    displayName: 'products';
+    description: '';
+    displayName: 'product';
     pluralName: 'products';
     singularName: 'product';
   };
@@ -1094,9 +1028,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::about.about': ApiAboutAbout;
-      'api::gallery.gallery': ApiGalleryGallery;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::product.product': ApiProductProduct;
