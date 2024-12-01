@@ -1,7 +1,8 @@
 {
     "collectionName": "components_ui_galary_cards",
     "info": {
-        "displayName": "galaryCard"
+        "displayName": "galaryCard",
+        "description": ""
     },
     "options": {},
     "attributes": {
@@ -9,11 +10,24 @@
             "type": "string"
         },
         "img": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
             "allowedTypes": [
                 "images"
-            ],
-            "type": "media",
-            "multiple": true
+            ]
+        },
+        "title": {
+            "type": "string"
+        },
+        "cost": {
+            "type": "decimal"
+        },
+        "count": {
+            "type": "integer"
+        },
+        "currency": {
+            "type": "string"
         }
     }
 }

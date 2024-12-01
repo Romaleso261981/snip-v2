@@ -76,11 +76,16 @@ export interface UiGalary extends Struct.ComponentSchema {
 export interface UiGalaryCard extends Struct.ComponentSchema {
   collectionName: 'components_ui_galary_cards';
   info: {
+    description: '';
     displayName: 'galaryCard';
   };
   attributes: {
+    cost: Schema.Attribute.Decimal;
+    count: Schema.Attribute.Integer;
+    currency: Schema.Attribute.String;
     href: Schema.Attribute.String;
     img: Schema.Attribute.Media<'images', true>;
+    title: Schema.Attribute.String;
   };
 }
 
