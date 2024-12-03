@@ -581,7 +581,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    galary: Schema.Attribute.Component<'ui.galary', false> &
+    gallery: Schema.Attribute.Component<'ui.galary', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

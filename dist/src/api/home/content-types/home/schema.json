@@ -54,7 +54,7 @@
                 }
             }
         },
-        "galary": {
+        "gallery": {
             "displayName": "galary",
             "type": "component",
             "repeatable": false,
