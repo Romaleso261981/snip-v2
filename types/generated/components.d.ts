@@ -1,41 +1,14 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedMedia extends Struct.ComponentSchema {
-  collectionName: 'components_shared_media';
+export interface UiAbout extends Struct.ComponentSchema {
+  collectionName: 'components_ui_abouts';
   info: {
-    description: '';
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'about';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
-  };
-}
-
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
-  info: {
-    description: '';
-    displayName: 'Seo';
-    icon: 'allergies';
-    name: 'Seo';
-  };
-  attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    text: Schema.Attribute.Text;
+    text2: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -45,59 +18,127 @@ export interface UiButton extends Struct.ComponentSchema {
     displayName: 'button';
   };
   attributes: {
-    href: Schema.Attribute.String;
-    text: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
-export interface UiGalary extends Struct.ComponentSchema {
-  collectionName: 'components_ui_galaries';
+export interface UiExamples extends Struct.ComponentSchema {
+  collectionName: 'components_ui_examples';
   info: {
-    description: '';
-    displayName: 'gallery';
+    displayName: 'examples';
   };
   attributes: {
-    galleryCard: Schema.Attribute.Component<'ui.galary-card', true>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Text;
   };
 }
 
-export interface UiGalaryCard extends Struct.ComponentSchema {
-  collectionName: 'components_ui_galary_cards';
+export interface UiGallery extends Struct.ComponentSchema {
+  collectionName: 'components_ui_galleries';
   info: {
     description: '';
-    displayName: 'galaryCard';
+    displayName: 'Gallery';
   };
   attributes: {
-    cost: Schema.Attribute.Decimal;
-    count: Schema.Attribute.Integer;
-    currency: Schema.Attribute.String;
-    href: Schema.Attribute.String;
-    img: Schema.Attribute.Media<'images', true>;
-    title: Schema.Attribute.String;
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
 export interface UiHero extends Struct.ComponentSchema {
   collectionName: 'components_ui_heroes';
   info: {
-    displayName: 'Hero';
+    displayName: 'hero';
   };
   attributes: {
-    heroBg: Schema.Attribute.Media<'images'>;
-    heroTitle: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface UiImages extends Struct.ComponentSchema {
+  collectionName: 'components_ui_images';
+  info: {
+    displayName: 'images';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface UiMain extends Struct.ComponentSchema {
+  collectionName: 'components_ui_mains';
+  info: {
+    displayName: 'main';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiMasterclass extends Struct.ComponentSchema {
+  collectionName: 'components_ui_masterclasses';
+  info: {
+    displayName: 'masterclass';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiPayment extends Struct.ComponentSchema {
+  collectionName: 'components_ui_payments';
+  info: {
+    displayName: 'payment';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiPersonalSpider extends Struct.ComponentSchema {
+  collectionName: 'components_ui_personal_spiders';
+  info: {
+    displayName: 'personalSpider';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiShipping extends Struct.ComponentSchema {
+  collectionName: 'components_ui_shippings';
+  info: {
+    displayName: 'shipping';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.media': SharedMedia;
-      'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+      'ui.about': UiAbout;
       'ui.button': UiButton;
-      'ui.galary': UiGalary;
-      'ui.galary-card': UiGalaryCard;
+      'ui.examples': UiExamples;
+      'ui.gallery': UiGallery;
       'ui.hero': UiHero;
+      'ui.images': UiImages;
+      'ui.main': UiMain;
+      'ui.masterclass': UiMasterclass;
+      'ui.payment': UiPayment;
+      'ui.personal-spider': UiPersonalSpider;
+      'ui.shipping': UiShipping;
     }
   }
 }

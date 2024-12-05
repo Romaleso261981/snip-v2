@@ -1,0 +1,77 @@
+{
+  "kind": "singleType",
+  "collectionName": "majsterklasis",
+  "info": {
+    "singularName": "majsterklasi",
+    "pluralName": "majsterklasis",
+    "displayName": "Майстеркласи",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "masterclass": {
+      "displayName": "masterclass",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.masterclass",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "personalSpider": {
+      "displayName": "personalSpider",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.personal-spider",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "masterclassButtonText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "personalSpiderButtonText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "images": {
+      "displayName": "images",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.images",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

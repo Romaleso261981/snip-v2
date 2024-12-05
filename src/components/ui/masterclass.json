@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_ui_masterclasses",
+  "info": {
+    "displayName": "masterclass"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

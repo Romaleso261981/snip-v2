@@ -5,11 +5,15 @@
   },
   "options": {},
   "attributes": {
-    "text": {
+    "name": {
       "type": "string"
     },
-    "href": {
+    "link": {
       "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

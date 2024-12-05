@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_ui_personal_spiders",
+    "info": {
+        "displayName": "personalSpider"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "text"
+        }
+    }
+}

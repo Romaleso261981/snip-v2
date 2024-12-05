@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "do_it_yourselfs",
+  "info": {
+    "singularName": "do-it-yourself",
+    "pluralName": "do-it-yourselfs",
+    "displayName": "Зроби сам",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "mainBottomText": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "main": {
+      "displayName": "main",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.main",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "examples": {
+      "displayName": "examples",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.examples",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

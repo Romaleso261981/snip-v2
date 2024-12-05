@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_ui_mains",
+    "info": {
+        "displayName": "main"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "text"
+        }
+    }
+}

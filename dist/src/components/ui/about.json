@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_ui_abouts",
+    "info": {
+        "displayName": "about"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "text"
+        },
+        "text2": {
+            "type": "text"
+        }
+    }
+}
