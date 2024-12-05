@@ -1,19 +1,9 @@
 {
     "collectionName": "components_ui_images",
     "info": {
-        "displayName": "images"
+        "displayName": "images",
+        "description": ""
     },
     "options": {},
-    "attributes": {
-        "images": {
-            "allowedTypes": [
-                "images",
-                "files",
-                "videos",
-                "audios"
-            ],
-            "type": "media",
-            "multiple": false
-        }
-    }
+    "attributes": {}
 }

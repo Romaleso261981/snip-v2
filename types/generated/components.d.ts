@@ -63,20 +63,21 @@ export interface UiHero extends Struct.ComponentSchema {
 export interface UiImages extends Struct.ComponentSchema {
   collectionName: 'components_ui_images';
   info: {
+    description: '';
     displayName: 'images';
   };
-  attributes: {
-    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
+  attributes: {};
 }
 
 export interface UiMain extends Struct.ComponentSchema {
   collectionName: 'components_ui_mains';
   info: {
+    description: '';
     displayName: 'main';
   };
   attributes: {
     text: Schema.Attribute.Text;
+    text2: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }

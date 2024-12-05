@@ -34,16 +34,6 @@
         }
       }
     },
-    "images": {
-      "type": "component",
-      "repeatable": false,
-      "component": "ui.images",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "leftFounder": {
       "type": "text",
       "pluginOptions": {
@@ -86,6 +76,36 @@
     },
     "bottomSecondText": {
       "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "mobileImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "desctopImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
