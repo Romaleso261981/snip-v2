@@ -753,6 +753,12 @@ export interface ApiNaboriNabori extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    count: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -794,7 +800,7 @@ export interface ApiNaboriNabori extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    price: Schema.Attribute.Integer &
+    price: Schema.Attribute.BigInteger &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
