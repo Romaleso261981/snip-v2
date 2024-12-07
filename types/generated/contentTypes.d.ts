@@ -456,6 +456,14 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    separatorImage2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

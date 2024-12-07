@@ -83,6 +83,38 @@
             }
         },
         "mobileImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "desctopImages": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "separatorImage2": {
             "allowedTypes": [
                 "images",
                 "files",
@@ -91,21 +123,6 @@
             ],
             "type": "media",
             "multiple": false,
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "desctopImages": {
-            "allowedTypes": [
-                "images",
-                "files",
-                "videos",
-                "audios"
-            ],
-            "type": "media",
-            "multiple": true,
             "pluginOptions": {
                 "i18n": {
                     "localized": true
