@@ -664,6 +664,114 @@ export interface ApiInfoInfo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInviteUsInviteUs extends Struct.SingleTypeSchema {
+  collectionName: 'invite_uses';
+  info: {
+    description: '';
+    displayName: '\u0417\u0430\u043F\u0440\u043E\u0441\u0438 \u043D\u0430\u0441';
+    pluralName: 'invite-uses';
+    singularName: 'invite-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::invite-us.invite-us'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMajsterklaMajsterkla extends Struct.CollectionTypeSchema {
+  collectionName: 'majsterklas';
+  info: {
+    displayName: '\u041C\u0430\u0439\u0441\u0442\u0435\u0440\u043A\u043B\u0430\u0441';
+    pluralName: 'majsterklas';
+    singularName: 'majsterkla';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    buttontext: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::majsterkla.majsterkla'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMajsterklasiMajsterklasi extends Struct.SingleTypeSchema {
   collectionName: 'majsterklasis';
   info: {
@@ -1434,6 +1542,8 @@ declare module '@strapi/strapi' {
       'api::do-it-yourself.do-it-yourself': ApiDoItYourselfDoItYourself;
       'api::home.home': ApiHomeHome;
       'api::info.info': ApiInfoInfo;
+      'api::invite-us.invite-us': ApiInviteUsInviteUs;
+      'api::majsterkla.majsterkla': ApiMajsterklaMajsterkla;
       'api::majsterklasi.majsterklasi': ApiMajsterklasiMajsterklasi;
       'api::nabori.nabori': ApiNaboriNabori;
       'api::zamovlennya.zamovlennya': ApiZamovlennyaZamovlennya;
