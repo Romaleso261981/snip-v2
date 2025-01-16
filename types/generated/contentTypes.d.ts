@@ -401,21 +401,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    desctopSeparatorImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    images: Schema.Attribute.Component<'ui.gallery', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    imagesDesctop: Schema.Attribute.Media<
+    desctopImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -435,13 +421,21 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::about-us.about-us'
     >;
-    main: Schema.Attribute.Component<'ui.text-section', false> &
+    main: Schema.Attribute.Component<'ui.main', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    mainBottomText: Schema.Attribute.Text &
+    mainBottomText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mobileImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -454,7 +448,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    separatorImageMobile: Schema.Attribute.Media<
+    separatorImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -462,7 +456,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    separatorImageMobile: Schema.Attribute.Media<
+    separatorImage2: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -479,6 +473,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
 export interface ApiBuyFromUsBuyFromUs extends Struct.SingleTypeSchema {
   collectionName: 'buy_from_uses';
   info: {
+    description: '';
     displayName: '\u041A\u0443\u043F\u0438 \u0432 \u043D\u0430\u0441';
     pluralName: 'buy-from-uses';
     singularName: 'buy-from-us';
@@ -500,7 +495,7 @@ export interface ApiBuyFromUsBuyFromUs extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::buy-from-us.buy-from-us'
     >;
-    main: Schema.Attribute.Component<'ui.text-section', false> &
+    main: Schema.Attribute.Component<'ui.main', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -514,11 +509,11 @@ export interface ApiBuyFromUsBuyFromUs extends Struct.SingleTypeSchema {
 }
 
 export interface ApiDoItYourselfDoItYourself extends Struct.SingleTypeSchema {
-  collectionName: 'do_it_yourselves';
+  collectionName: 'do_it_yourselfs';
   info: {
     description: '';
     displayName: '\u0417\u0440\u043E\u0431\u0438 \u0441\u0430\u043C';
-    pluralName: 'do-it-yourselves';
+    pluralName: 'do-it-yourselfs';
     singularName: 'do-it-yourself';
   };
   options: {
@@ -533,7 +528,7 @@ export interface ApiDoItYourselfDoItYourself extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    examples: Schema.Attribute.Component<'ui.prikladi-robit', true> &
+    examples: Schema.Attribute.Component<'ui.examples', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -544,7 +539,7 @@ export interface ApiDoItYourselfDoItYourself extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::do-it-yourself.do-it-yourself'
     >;
-    main: Schema.Attribute.Component<'ui.text-section', false> &
+    main: Schema.Attribute.Component<'ui.main', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -574,7 +569,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    about: Schema.Attribute.Component<'ui.text-section', false> &
+    about: Schema.Attribute.Component<'ui.about', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -589,7 +584,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    gallery: Schema.Attribute.Component<'ui.gallery', false> &
+    gallery: Schema.Attribute.Component<'ui.gallery', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -613,6 +608,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
 export interface ApiInfoInfo extends Struct.SingleTypeSchema {
   collectionName: 'infos';
   info: {
+    description: '';
     displayName: '\u0406\u043D\u0444\u043E';
     pluralName: 'infos';
     singularName: 'info';
@@ -631,26 +627,26 @@ export interface ApiInfoInfo extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::info.info'>;
-    payment: Schema.Attribute.Component<'ui.text-section', false> &
+    payment: Schema.Attribute.Component<'ui.payment', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    paymentBottomText: Schema.Attribute.Text &
+    paymentBottomText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    shipping: Schema.Attribute.Component<'ui.text-section', false> &
+    shipping: Schema.Attribute.Component<'ui.shipping', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    shippingBottomText: Schema.Attribute.Text &
+    shippingBottomText: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -682,7 +678,7 @@ export interface ApiInviteUsInviteUs extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    examples: Schema.Attribute.Component<'ui.example', true> &
+    Examples: Schema.Attribute.Component<'ui.examples', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -727,9 +723,65 @@ export interface ApiInviteUsInviteUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiMajsterklaMajsterkla extends Struct.CollectionTypeSchema {
+  collectionName: 'majsterklas';
+  info: {
+    displayName: '\u041C\u0430\u0439\u0441\u0442\u0435\u0440\u043A\u043B\u0430\u0441';
+    pluralName: 'majsterklas';
+    singularName: 'majsterkla';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    buttontext: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::majsterkla.majsterkla'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMajsterklasiMajsterklasi extends Struct.SingleTypeSchema {
   collectionName: 'majsterklasis';
   info: {
+    description: '';
     displayName: '\u041C\u0430\u0439\u0441\u0442\u0435\u0440\u043A\u043B\u0430\u0441\u0438';
     pluralName: 'majsterklasis';
     singularName: 'majsterklasi';
@@ -752,7 +804,7 @@ export interface ApiMajsterklasiMajsterklasi extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    images: Schema.Attribute.Component<'ui.gallery', false> &
+    images: Schema.Attribute.Component<'ui.images', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -763,7 +815,7 @@ export interface ApiMajsterklasiMajsterklasi extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::majsterklasi.majsterklasi'
     >;
-    masterclass: Schema.Attribute.Component<'ui.text-section', false> &
+    masterclass: Schema.Attribute.Component<'ui.masterclass', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -775,7 +827,7 @@ export interface ApiMajsterklasiMajsterklasi extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    personalSpider: Schema.Attribute.Component<'ui.text-section', false> &
+    personalSpider: Schema.Attribute.Component<'ui.personal-spider', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -815,6 +867,15 @@ export interface ApiNaboriNabori extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -915,7 +976,6 @@ export interface ApiZamovlennyaZamovlennya extends Struct.CollectionTypeSchema {
         };
       }>;
     product: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1456,6 +1516,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::info.info': ApiInfoInfo;
       'api::invite-us.invite-us': ApiInviteUsInviteUs;
+      'api::majsterkla.majsterkla': ApiMajsterklaMajsterkla;
       'api::majsterklasi.majsterklasi': ApiMajsterklasiMajsterklasi;
       'api::nabori.nabori': ApiNaboriNabori;
       'api::zamovlennya.zamovlennya': ApiZamovlennyaZamovlennya;

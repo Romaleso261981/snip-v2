@@ -4,7 +4,8 @@
     "info": {
         "singularName": "majsterklasi",
         "pluralName": "majsterklasis",
-        "displayName": "Майстеркласи"
+        "displayName": "Майстеркласи",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
@@ -16,58 +17,60 @@
     },
     "attributes": {
         "heading": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "masterclass": {
+            "displayName": "masterclass",
             "type": "component",
             "repeatable": false,
+            "component": "ui.masterclass",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "component": "ui.text-section"
+            }
         },
         "personalSpider": {
+            "displayName": "personalSpider",
             "type": "component",
             "repeatable": false,
+            "component": "ui.personal-spider",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "component": "ui.text-section"
+            }
         },
         "masterclassButtonText": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "personalSpiderButtonText": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "images": {
             "type": "component",
-            "repeatable": false,
+            "repeatable": true,
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
             },
-            "component": "ui.gallery"
+            "component": "ui.images"
         }
     }
 }

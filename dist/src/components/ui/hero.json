@@ -1,8 +1,7 @@
 {
     "collectionName": "components_ui_heroes",
     "info": {
-        "displayName": "Hero",
-        "icon": "picture"
+        "displayName": "hero"
     },
     "options": {},
     "attributes": {
@@ -17,7 +16,7 @@
                 "audios"
             ],
             "type": "media",
-            "multiple": false
+            "multiple": true
         }
     }
 }

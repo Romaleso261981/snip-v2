@@ -2,7 +2,7 @@
   "collectionName": "components_ui_galleries",
   "info": {
     "displayName": "Gallery",
-    "icon": "apps"
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,7 +14,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }

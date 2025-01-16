@@ -1,22 +1,24 @@
 {
   "collectionName": "components_ui_examples",
   "info": {
-    "displayName": "examples"
+    "displayName": "examples",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "text": {
-      "type": "text"
+    "title": {
+      "type": "string"
     }
   }
 }

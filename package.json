@@ -1,5 +1,5 @@
 {
-  "name": "snip-cms",
+  "name": "backend",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -7,16 +7,19 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "start:dev": "npm i && npm run develop",
+    "export": "npm run strapi export --no-encrypt"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.4.2",
-    "@strapi/plugin-users-permissions": "5.4.2",
-    "@strapi/strapi": "5.4.2",
-    "glob": "^11.0.0",
-    "pg": "^8.13.1",
-    "pg-connection-string": "^2.6.2",
+    "@strapi/plugin-cloud": "5.4.0",
+    "@strapi/plugin-users-permissions": "5.4.0",
+    "@strapi/strapi": "5.4.0",
+    "better-sqlite3": "11.3.0",
+    "fs-extra": "^10.0.0",
+    "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -33,6 +36,6 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "2bd1e4da-731d-4cc1-8f7c-8aa4dbd9d6c5"
+    "uuid": "a71eddd5-cbb7-4341-aeb2-3bd24ae2ac00"
   }
 }

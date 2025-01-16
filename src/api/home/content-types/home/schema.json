@@ -16,46 +16,48 @@
     }
   },
   "attributes": {
-    "hero": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "ui.hero"
-    },
     "about": {
+      "displayName": "about",
       "type": "component",
       "repeatable": false,
+      "component": "ui.about",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "ui.text-section"
+      }
     },
     "button": {
+      "displayName": "button",
       "type": "component",
       "repeatable": false,
+      "component": "ui.button",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "ui.button"
+      }
+    },
+    "hero": {
+      "displayName": "hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "gallery": {
-      "displayName": "Gallery",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
+      "component": "ui.gallery",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "ui.gallery"
+      }
     }
   }
 }

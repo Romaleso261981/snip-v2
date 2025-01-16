@@ -17,70 +17,69 @@
     },
     "attributes": {
         "sent": {
+            "type": "boolean",
+            "default": false,
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "boolean",
-            "default": false
+            }
         },
         "product": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string",
-            "required": true
+            }
         },
         "country": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "city": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "address": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "price": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "receiver": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         },
         "phone": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
+            }
         }
     }
 }

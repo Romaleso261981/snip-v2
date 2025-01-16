@@ -17,36 +17,12 @@
     },
     "attributes": {
         "name": {
+            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            },
-            "type": "string"
-        },
-        "size": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "material": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "includes": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "text"
+            }
         },
         "image": {
             "type": "media",
@@ -65,12 +41,52 @@
             }
         },
         "price": {
+            "type": "biginteger",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "material": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
             },
-            "type": "biginteger"
+            "type": "string"
+        },
+        "includes": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "text"
+        },
+        "size": {
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "type": "string"
+        },
+        "images": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }

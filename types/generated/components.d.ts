@@ -1,74 +1,10 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface UiButton extends Struct.ComponentSchema {
-  collectionName: 'components_ui_buttons';
-  info: {
-    displayName: 'Button';
-    icon: 'cursor';
-  };
-  attributes: {
-    link: Schema.Attribute.String;
-    name: Schema.Attribute.String;
-  };
-}
-
-export interface UiExample extends Struct.ComponentSchema {
-  collectionName: 'components_ui_examples';
+export interface UiAbout extends Struct.ComponentSchema {
+  collectionName: 'components_ui_abouts';
   info: {
     description: '';
-    displayName: 'Example';
-    icon: 'folder';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface UiGallery extends Struct.ComponentSchema {
-  collectionName: 'components_ui_galleries';
-  info: {
-    displayName: 'Gallery';
-    icon: 'apps';
-  };
-  attributes: {
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-  };
-}
-
-export interface UiHero extends Struct.ComponentSchema {
-  collectionName: 'components_ui_heroes';
-  info: {
-    displayName: 'Hero';
-    icon: 'picture';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    text: Schema.Attribute.String;
-  };
-}
-
-export interface UiPrikladiRobit extends Struct.ComponentSchema {
-  collectionName: 'components_ui_prikladi_robit';
-  info: {
-    displayName: '\u041F\u0440\u0438\u043A\u043B\u0430\u0434\u0438 \u0440\u043E\u0431\u0456\u0442';
-  };
-  attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface UiTextSection extends Struct.ComponentSchema {
-  collectionName: 'components_ui_text_sections';
-  info: {
-    description: '';
-    displayName: 'TextSection';
-    icon: 'layout';
+    displayName: 'about';
   };
   attributes: {
     bottomText: Schema.Attribute.Text;
@@ -77,15 +13,141 @@ export interface UiTextSection extends Struct.ComponentSchema {
   };
 }
 
+export interface UiButton extends Struct.ComponentSchema {
+  collectionName: 'components_ui_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface UiExamples extends Struct.ComponentSchema {
+  collectionName: 'components_ui_examples';
+  info: {
+    description: '';
+    displayName: 'examples';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiGallery extends Struct.ComponentSchema {
+  collectionName: 'components_ui_galleries';
+  info: {
+    description: '';
+    displayName: 'Gallery';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface UiHero extends Struct.ComponentSchema {
+  collectionName: 'components_ui_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface UiImages extends Struct.ComponentSchema {
+  collectionName: 'components_ui_images';
+  info: {
+    description: '';
+    displayName: 'images';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface UiMain extends Struct.ComponentSchema {
+  collectionName: 'components_ui_mains';
+  info: {
+    description: '';
+    displayName: 'main';
+  };
+  attributes: {
+    bottomText: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiMasterclass extends Struct.ComponentSchema {
+  collectionName: 'components_ui_masterclasses';
+  info: {
+    description: '';
+    displayName: 'masterclass';
+  };
+  attributes: {
+    bottomText: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiPayment extends Struct.ComponentSchema {
+  collectionName: 'components_ui_payments';
+  info: {
+    displayName: 'payment';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiPersonalSpider extends Struct.ComponentSchema {
+  collectionName: 'components_ui_personal_spiders';
+  info: {
+    description: '';
+    displayName: 'personalSpider';
+  };
+  attributes: {
+    bottomText: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UiShipping extends Struct.ComponentSchema {
+  collectionName: 'components_ui_shippings';
+  info: {
+    displayName: 'shipping';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'ui.about': UiAbout;
       'ui.button': UiButton;
-      'ui.example': UiExample;
+      'ui.examples': UiExamples;
       'ui.gallery': UiGallery;
       'ui.hero': UiHero;
-      'ui.prikladi-robit': UiPrikladiRobit;
-      'ui.text-section': UiTextSection;
+      'ui.images': UiImages;
+      'ui.main': UiMain;
+      'ui.masterclass': UiMasterclass;
+      'ui.payment': UiPayment;
+      'ui.personal-spider': UiPersonalSpider;
+      'ui.shipping': UiShipping;
     }
   }
 }
