@@ -1,8 +1,7 @@
 {
   "collectionName": "components_ui_buttons",
   "info": {
-    "displayName": "Button",
-    "icon": "cursor"
+    "displayName": "button"
   },
   "options": {},
   "attributes": {
@@ -11,6 +10,10 @@
     },
     "link": {
       "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

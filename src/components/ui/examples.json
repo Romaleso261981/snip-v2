@@ -1,8 +1,7 @@
 {
   "collectionName": "components_ui_examples",
   "info": {
-    "displayName": "Example",
-    "icon": "folder",
+    "displayName": "examples",
     "description": ""
   },
   "options": {},
@@ -18,11 +17,8 @@
         "audios"
       ]
     },
-    "text": {
+    "title": {
       "type": "string"
-    },
-    "description": {
-      "type": "text"
     }
   }
 }

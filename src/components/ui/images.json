@@ -1,14 +1,12 @@
 {
-  "collectionName": "components_ui_prikladi_robit",
+  "collectionName": "components_ui_images",
   "info": {
-    "displayName": "Приклади робіт"
+    "displayName": "images",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "image": {
+    "img": {
       "allowedTypes": [
         "images",
         "files",

@@ -49,22 +49,22 @@
       }
     },
     "mainBottomText": {
-      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "type": "text"
     },
-    "examples": {
+    "Examples": {
       "type": "component",
       "repeatable": true,
-      "component": "ui.example",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "ui.examples"
     }
   }
 }
