@@ -4,8 +4,7 @@
   "info": {
     "singularName": "majsterklasi",
     "pluralName": "majsterklasis",
-    "displayName": "Майстеркласи",
-    "description": ""
+    "displayName": "Майстеркласи"
   },
   "options": {
     "draftAndPublish": true
@@ -17,60 +16,58 @@
   },
   "attributes": {
     "heading": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "masterclass": {
-      "displayName": "masterclass",
-      "type": "component",
-      "repeatable": false,
-      "component": "ui.masterclass",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "personalSpider": {
-      "displayName": "personalSpider",
-      "type": "component",
-      "repeatable": false,
-      "component": "ui.personal-spider",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "masterclassButtonText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "personalSpiderButtonText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "images": {
-      "type": "component",
-      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "ui.images"
+      "type": "string"
+    },
+    "masterclass": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.text-section"
+    },
+    "personalSpider": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.text-section"
+    },
+    "masterclassButtonText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "personalSpiderButtonText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.gallery"
     }
   }
 }

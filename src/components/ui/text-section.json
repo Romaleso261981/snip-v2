@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_ui_masterclasses",
+  "collectionName": "components_ui_text_sections",
   "info": {
-    "displayName": "masterclass",
+    "displayName": "TextSection",
+    "icon": "layout",
     "description": ""
   },
   "options": {},

@@ -1,9 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "do_it_yourselfs",
+  "collectionName": "do_it_yourselves",
   "info": {
     "singularName": "do-it-yourself",
-    "pluralName": "do-it-yourselfs",
+    "pluralName": "do-it-yourselves",
     "displayName": "Зроби сам",
     "description": ""
   },
@@ -17,26 +17,25 @@
   },
   "attributes": {
     "main": {
-      "displayName": "main",
       "type": "component",
       "repeatable": false,
-      "component": "ui.main",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "ui.text-section"
     },
     "examples": {
-      "displayName": "examples",
+      "displayName": "Приклади робіт",
       "type": "component",
-      "repeatable": false,
-      "component": "ui.examples",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "ui.prikladi-robit"
     }
   }
 }
