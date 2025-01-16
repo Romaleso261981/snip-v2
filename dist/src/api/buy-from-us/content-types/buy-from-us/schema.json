@@ -4,8 +4,7 @@
     "info": {
         "singularName": "buy-from-us",
         "pluralName": "buy-from-uses",
-        "displayName": "Купи в нас",
-        "description": ""
+        "displayName": "Купи в нас"
     },
     "options": {
         "draftAndPublish": true
@@ -19,12 +18,12 @@
         "main": {
             "type": "component",
             "repeatable": false,
-            "component": "ui.main",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "component": "ui.text-section"
         }
     }
 }

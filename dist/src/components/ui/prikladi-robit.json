@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_ui_prikladi_robit",
+    "info": {
+        "displayName": "Приклади робіт"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "image": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": false
+        }
+    }
+}

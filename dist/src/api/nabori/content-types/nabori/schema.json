@@ -17,36 +17,36 @@
     },
     "attributes": {
         "name": {
-            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "string"
         },
-        "sizeDescription": {
-            "type": "text",
+        "size": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "string"
         },
-        "materialDescription": {
-            "type": "text",
+        "material": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "string"
         },
-        "includesDescription": {
-            "type": "text",
+        "includes": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "text"
         },
         "image": {
             "type": "media",
@@ -65,68 +65,12 @@
             }
         },
         "price": {
-            "type": "biginteger",
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            }
-        },
-        "materialTitle": {
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
             },
-            "type": "string"
-        },
-        "includesTitle": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "union": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "sizeTitle": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "buttonText": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "string"
-        },
-        "bottomText": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "text"
-        },
-        "count": {
-            "pluginOptions": {
-                "i18n": {
-                    "localized": true
-                }
-            },
-            "type": "integer"
+            "type": "biginteger"
         }
     }
 }

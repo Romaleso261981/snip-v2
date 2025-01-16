@@ -4,8 +4,7 @@
     "info": {
         "singularName": "info",
         "pluralName": "infos",
-        "displayName": "Інфо",
-        "description": ""
+        "displayName": "Інфо"
     },
     "options": {
         "draftAndPublish": true
@@ -17,42 +16,40 @@
     },
     "attributes": {
         "shipping": {
-            "displayName": "shipping",
             "type": "component",
             "repeatable": false,
-            "component": "ui.shipping",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "component": "ui.text-section"
         },
         "shippingBottomText": {
-            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "text"
         },
         "payment": {
-            "displayName": "payment",
             "type": "component",
             "repeatable": false,
-            "component": "ui.payment",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "component": "ui.text-section"
         },
         "paymentBottomText": {
-            "type": "string",
             "pluginOptions": {
                 "i18n": {
                     "localized": true
                 }
-            }
+            },
+            "type": "text"
         }
     }
 }
