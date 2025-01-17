@@ -26,14 +26,6 @@
         }
       }
     },
-    "mainBottomText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "leftFounder": {
       "type": "text",
       "pluginOptions": {
@@ -50,7 +42,7 @@
         }
       }
     },
-    "separatorImage": {
+    "mobileSeparatorImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -114,15 +106,16 @@
         }
       }
     },
-    "separatorImage2": {
+    "desctopSeparatorImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
