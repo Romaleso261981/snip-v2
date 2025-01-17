@@ -24,9 +24,9 @@
                 }
             }
         },
-        "images": {
+        "image": {
             "type": "media",
-            "multiple": true,
+            "multiple": false,
             "required": false,
             "allowedTypes": [
                 "images",
@@ -71,6 +71,22 @@
                 }
             },
             "type": "string"
+        },
+        "images": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         }
     }
 }

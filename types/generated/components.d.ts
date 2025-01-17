@@ -44,10 +44,7 @@ export interface UiGallery extends Struct.ComponentSchema {
     displayName: 'Gallery';
   };
   attributes: {
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
