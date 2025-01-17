@@ -675,16 +675,16 @@ export interface ApiInviteUsInviteUs extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    Examples: Schema.Attribute.Component<'ui.examples', true> &
+    cardsExample: Schema.Attribute.Component<'ui.masterclass', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    gallery: Schema.Attribute.Media<
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desctopGalleryimages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -698,12 +698,6 @@ export interface ApiInviteUsInviteUs extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::invite-us.invite-us'
     >;
-    mainBottomText: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedAt: Schema.Attribute.DateTime;
     text: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{

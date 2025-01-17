@@ -92,6 +92,10 @@ export interface UiMasterclass extends Struct.ComponentSchema {
   };
   attributes: {
     bottomText: Schema.Attribute.Text;
+    imageExample: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
